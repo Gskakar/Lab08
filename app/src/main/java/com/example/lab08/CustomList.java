@@ -14,6 +14,17 @@ public class CustomList {
         cities.add(city);
     }
 
-    public boolean hasCity(City city) { return cities.contains(city);}
+    public boolean hasCity(City city) {
+        return cities.contains(city);
+    }
+
+    public int getCount() {
+        return cities.size();
+    }
+
+    public void deleteCity(City city) { if (!cities.remove(city)) {
+        throw new IllegalArgumentException("City not in list");
+    }}
+
 
 }
